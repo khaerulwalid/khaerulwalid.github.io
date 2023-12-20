@@ -3,9 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <link rel="shortcut icon" href="./img/favicon.ico">
+    <title>DocHealth Activity To-Do List</title>
+    <link rel="stylesheet" href="style.css">
     
+</head> 
+<body>
+    <div class="container">
+        <audio autoplay>
+            <source src="music.m4a" type="audio/mpeg">
+          </audio>
+        <nav>
+            <label class="logo">LW Health</label>
+            <ul>
+                <li><a class="active" href="">home</a></li>
+                <li><a href="">TEAM</a></li>
+                <li><a href="">Fill todolist</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <section>
+                <div class="left-column">
+                    <h1>Health<span>Todolist</span></h1>
+                    <h3>keeps your health activities monitored</h3>
+                    <p><em>"Pola hidup sehat adalah cara hidup yang bertujuan untuk menjaga kesehatan tubuh dan mental. Menjaga pola hidup sehat sejak dini sangat penting karena dapat membantu mencegah munculnya penyakit kronis, meningkatkan kualitas hidup dan banyak manfaat pola hidup sehat lainnya."_____</em></p>
+                </div>
+                <div class="right-column">
+                    <input type="text" id="name" autofocus>
+                    <button>Enter App</button>
+                </div>
+            </section>  
+        </div>
+    </div>
+    
+
+    <script>
+        const name = document.querySelector("#name")
+        console.log(name.value);
+        localStorage.setItem('nama', name.value);
+
+        console.log(localStorage.getItem('nama'));
+    </script>
 </body>
 </html>
