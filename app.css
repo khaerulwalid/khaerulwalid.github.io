@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background-color: #021d54;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+}
+
+nav {
+    background-color: #021d54;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+label.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight:700;
+}
+
+nav ul {
+    margin-right: 80px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 25px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 7px 13px;
+    border-radius: 3px;
+}
+
+nav ul li span {
+    color: rgb(208, 255, 0);
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 7px 13px;
+    border-radius: 3px;
+    background-color: #0a4dd3;
+    margin-left: 10px;
+}
+
+a:hover {
+    background: #032d81;
+    transition: .5s;
+}
+
+section {
+    background: linear-gradient(to bottom, rgba(15, 33, 103, 0.99), rgba(15, 33, 103, 0.7)), url("./img/health.jpg");
+    background-size: cover;
+
+}
+
+section {
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding: 100px 100px;
+}
+
+section .left-column {
+    flex-basis: 50%;
+}
+
+section .right-column {
+    flex-basis: 50%;
+}
+
+
+.left-column h1 {
+    font-size: 70px;
+    font-weight: bolder;
+    color: white;
+}
+
+.left-column span {
+    color: #F4F27E;
+}
+
+.left-column h3 {
+    font-size: 28px;
+    font-weight:400;
+    color: #F4F27E;
+    margin-top: -10px;
+}
+
+.left-column p {
+    font-size: 20px;
+    line-height: 30px;
+    color: #0a4dd3;
+    margin: 40px 0;
+    background-color: #021d54;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.right-column input {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 50%;
+    padding: 15px 30px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background: transparent;
+    font-size: 20px;
+    color: white;
+    font-weight: 500;
+    border: 1px solid #fff;
+    text-align: center;
+}
+
+.right-column button {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    width: 50%;
+    padding: 15px 30px;
+    margin-right: 15px;
+    border-radius: 10px;
+    background-color: #021d54;
+    border: 1px solid #021d54;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.right-column button:hover {
+    background-color: #032d81;
+    border: 1px solid #fff;
+}
+
+.right-column button a{
+    color: white;
+}
+
+
+/* Todo App */
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    background-color: #fff;
+    margin: 30px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.todo-app h2 {
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo-app h2 img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+
+button.btn-app {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #0a4dd3;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+ul#list-container li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul#list-container li::before {
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50px;
+    background-image: url(./img/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul#list-container li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul#list-container li.checked::before {
+    background-image: url(./img/checked.png);
+}
+
+ul#list-container li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 45px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+}
+
+ul#list-container li span:hover {
+    background: #edeef0;
+}
+
+ul#list-container li button {
+    position: absolute;
+    right: 45px;
+    top: 5px;
+    width: 60px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+}
+
+ul#list-container li button:hover {
+    background: #edeef0;
+}
+
+/* Save Todo */
+.save-todo {
+    width: 100%;
+    max-width: 450px;
+    background-color: #fff;
+    margin: 30px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.save-todo h2 {
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.save-todo h2 img {
+    width: 30px;
+    margin-left: 10px;
+}
