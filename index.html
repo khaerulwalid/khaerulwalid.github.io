@@ -10,15 +10,11 @@
 </head> 
 <body>
     <div class="container">
-        <audio autoplay>
-            <source src="music.m4a" type="audio/mpeg">
-          </audio>
         <nav>
             <label class="logo">LW Health</label>
             <ul>
-                <li><a class="active" href="">home</a></li>
+                <li><a href="index.html">home</a></li>
                 <li><a href="">TEAM</a></li>
-                <li><a href="">Fill todolist</a></li>
             </ul>
         </nav>
         <div class="hero">
@@ -30,7 +26,7 @@
                 </div>
                 <div class="right-column">
                     <input type="text" id="name" autofocus>
-                    <button>Enter App</button>
+                    <button id="btnEnter"><a href="app.html">Enter App</a></button>
                 </div>
             </section>  
         </div>
@@ -39,10 +35,15 @@
 
     <script>
         const name = document.querySelector("#name")
-        console.log(name.value);
-        localStorage.setItem('nama', name.value);
+        const btnEnter = document.querySelector("#btnEnter")
 
-        console.log(localStorage.getItem('nama'));
+        btnEnter.addEventListener("click", function() {
+            varName = name.value
+            localStorage.setItem('nama', varName);
+            let storage = localStorage.getItem("nama")
+            console.log(storage);
+        })
+
     </script>
 </body>
 </html>
